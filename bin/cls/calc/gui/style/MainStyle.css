@@ -1,0 +1,39 @@
+/* gui.style.MainStyle.css */ 
+
+.text-area {
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 25px;
+	-fx-font-family: "Helvetica Neue Light";
+}
+
+.text-area .content {
+	-fx-background-color: grey;
+}
+
+.text-area *.text {
+	-fx-text-alignment: right;
+}
+
+.button {
+	-fx-background-radius: 0;
+	-fx-background-color:  #000000;
+	-fx-font-family: "Helvetica Neue Light";
+	-fx-font-size: 21px;
+}
+
+.button:pressed {
+	-fx-background-color: #ffffff;
+}
+
+.operators {
+	-fx-background-color: #000000;
+	-fx-text-fill: #ffffff;
+}
+
+.operators:pressed {
+	-fx-background-color: #ffffff;
+}
+
+.topOperators {
+	-fx-background-color: #D6D6D6;
+}
