@@ -61,7 +61,7 @@ public class Main extends Application implements ApplicationDelegate {
 	/* Functions: Constructors */	
 	public void constructMainView() {
 		try {
-			FXMLLoader loader = new FXMLLoader(Main.class.getResource("/gui/fxml/MainView.fxml"));
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource("../gui/fxml/MainView.fxml"));
 			anchorPane = (AnchorPane) loader.load();
 			
 			ViewController controller = loader.getController();
@@ -78,19 +78,19 @@ public class Main extends Application implements ApplicationDelegate {
 
 	/* Application Delegate Handlers */ 
 	@Override public void applicationDidOpen() {	// Application Event: did open 
-		
+		System.out.println("applicationDidOpen");
 	}
 
 	@Override public void applicationDidDealoc() {	// Application Event: memory deallocated 
-		
+		System.out.println("applicationDidDealoc");
 	}
 
 	@Override public void applicationWillClose() {	// Application Event: will close
-		
+		System.out.println("applicationWillClose");
 	}
 
 	@Override public void applicationDidClose() {	// Application Event: did close
-	
+		System.out.println("applicationDidClose");
 	}
-
+	/* */ 
 }
