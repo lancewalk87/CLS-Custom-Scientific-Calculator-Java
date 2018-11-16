@@ -31,7 +31,7 @@ import cls.calc.gui.components.MenuItems;
 import cls.calc.sys.*;	
 import cls.calc.service.*;
 
-abstract interface ApplicationDelegate {
+abstract interface ApplicationDelegate { // JFX Delegate 
 	/* Application ENV Variables */ 
 	static boolean DEV_MODE = true; // Controls Debug Interface
 	/* Application Events */ 

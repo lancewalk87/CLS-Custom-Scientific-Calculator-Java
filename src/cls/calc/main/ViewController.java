@@ -13,7 +13,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea; 
 
-public class ViewController {
+abstract interface FXLDelegate { // ViewController Delegate
+	
+}
+
+public class ViewController implements FXLDelegate {
 	/* Interface Properties */
 	private Boolean[] operator = new Boolean[4];
 	private int operatorCount = 0;
@@ -50,39 +54,17 @@ public class ViewController {
 		}
 		Button btn = (Button) event.getSource();
 		switch(btn.getId()) {
-		case "zero" :
-			display.appendText("0");
-			break;
-		case "one" :
-			display.appendText("1");
-			break;
-		case "two" :
-			display.appendText("2");
-			break;
-		case "three" :
-			display.appendText("3");
-			break;
-		case "four" :
-			display.appendText("4");
-			break;
-		case "five" :
-			display.appendText("5");
-			break;
-		case "six" :
-			display.appendText("6");
-			break;
-		case "seven" :
-			display.appendText("7");
-			break;
-		case "eight" :
-			display.appendText("8");
-			break;
-		case "nine" :
-			display.appendText("9");
-			break;
-		case "comma" :
-			display.appendText(".");
-			break;
+		case "zero": display.appendText("0"); break;
+		case "one": display.appendText("1"); break;
+		case "two": display.appendText("2"); break;
+		case "three": display.appendText("3"); break;
+		case "four": display.appendText("4"); break;
+		case "five": display.appendText("5"); break;
+		case "six": display.appendText("6"); break;
+		case "seven": display.appendText("7"); break;
+		case "eight": display.appendText("8"); break;
+		case "nine": display.appendText("9"); break;
+		case "comma": display.appendText("."); break;
 		}
 	}
 	
