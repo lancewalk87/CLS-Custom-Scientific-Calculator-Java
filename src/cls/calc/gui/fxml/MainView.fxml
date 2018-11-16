@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="297.0" style="-fx-background-color: grey;" stylesheets="@../style/MainStyle.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cls.calc.main.ViewController">
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="450.0" minWidth="600.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: grey;" stylesheets="@../style/MainStyle.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cls.calc.main.ViewController">
    <children>
       <VBox>
          <children>

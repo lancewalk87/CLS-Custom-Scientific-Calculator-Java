@@ -23,6 +23,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+// local packages
+import cls.calc.gui.components.*; 
+import cls.calc.sys.*;	
+import cls.calc.service.*;
+
 abstract interface ApplicationDelegate {
 	/* Application Events */ 
 	void applicationDidOpen();		// Application Event: open 
@@ -31,7 +36,7 @@ abstract interface ApplicationDelegate {
 	void applicationDidClose();		// Application Event: closed 
 }
 
-public class Main extends Application implements ApplicationDelegate {
+public class Main extends Application implements ApplicationDelegate { // Entry 
 	/* Application Properties */ 
 	private Stage primaryStage;
 	private AnchorPane anchorPane;
@@ -46,7 +51,7 @@ public class Main extends Application implements ApplicationDelegate {
 		primaryStage.setResizable(false);
 		
 		// construct interface: 
-		constructMainView(); 
+		constructInterface(); 
 		System.out.println("calc: Start Application");
 	}
 	
@@ -59,7 +64,7 @@ public class Main extends Application implements ApplicationDelegate {
 	 }
 	
 	/* Functions: Constructors */	
-	public void constructMainView() {
+	public void constructInterface() {
 		try {
 			FXMLLoader loader = new FXMLLoader(Main.class.getResource("../gui/fxml/MainView.fxml"));
 			anchorPane = (AnchorPane) loader.load();
@@ -71,7 +76,6 @@ public class Main extends Application implements ApplicationDelegate {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -92,5 +96,6 @@ public class Main extends Application implements ApplicationDelegate {
 	@Override public void applicationDidClose() {	// Application Event: did close
 		System.out.println("applicationDidClose");
 	}
+	
 	/* */ 
 }
